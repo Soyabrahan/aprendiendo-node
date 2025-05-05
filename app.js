@@ -1,7 +1,5 @@
-//Primera app con node.js
+const saludo = require("./saludo.js");
 
-function saludar(nombre){
-    return "Holaaa " + nombre;
-}
+console.log(saludo.saludar("abran"));
 
-console.log(saludar("abran"));
+console.log(saludo.saludarMundo);
