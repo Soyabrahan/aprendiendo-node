@@ -27,6 +27,6 @@ miPedidoDePizza
 .then((mensajeDeConfirmacion) => {
     console.log(mensajeDeConfirmacion);
 })
-.then(null, (mensajeDeError) => {
+.catch((mensajeDeError) => {
     console.log(mensajeDeError)
 });
