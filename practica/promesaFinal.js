@@ -22,7 +22,8 @@ function procesarPedido(respuesta){
         },4000);
     })
 }
-
+//NO ASI NOOO
+/*
 ordenarProducto("taza")
 .then(respuesta =>{
     console.log("Respuesta recibida");
@@ -34,4 +35,20 @@ ordenarProducto("taza")
 })
 .catch(error =>{
     console.log("ERRORRRRRRR")
-});
+});       */
+
+//ASI  SI
+async function realizarPedido(producto) {
+    try{
+        const respuesta = await ordenarProducto(producto);
+        console.log("Respuesta recibida");
+        console.log(respuesta);
+        const respuestaProcesada = await procesarPedido(respuesta);
+        console.log(respuestaProcesada);
+    } catch (error){
+        console.log(error);
+    }
+    
+}
+
+realizarPedido("taza");
